@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="FbLeague">
+    <Key>
+      <PropertyRef Name="MatchId" />
+    </Key>
+    <Property Name="MatchId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TeamName1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TeamName2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="WinningTeam" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Points" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Database1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="FbLeagues" EntityType="Self.FbLeague" />
+  </EntityContainer>
+</Schema>
