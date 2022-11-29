@@ -22,7 +22,7 @@ namespace FootBallLeagueMVC.Controllers
         {
             db.FbLeagues.Add(fbl);
             db.SaveChanges();
-            return RedirectToAction("AddMatchResult");
+            return RedirectToAction("Index1");
            
         }
         public ActionResult Index1()
